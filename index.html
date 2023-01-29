@@ -1,0 +1,14 @@
+---
+bg: "rails.jpg"
+layout: default
+crawlertitle: "thepcn3rd blog"
+title: "[N]ever [E]nding [R]endering of [D]ata"
+summary: "Blog"
+---
+
+{% for post in site.posts limit: 10 %}
+  <article class="index-page">
+    <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+    {{ post.excerpt }}
+  </article>
+{% endfor %}
